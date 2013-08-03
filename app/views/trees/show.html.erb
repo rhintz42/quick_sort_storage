@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tree.title %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @tree.picture %>
+</p>
+
+<p>
+  <strong>Tree type:</strong>
+  <%= @tree.tree_type %>
+</p>
+
+<% for n in @tree.nodes %>
+  <p>
+    <strong>Node:</strong>
+    <%= n.title %>
+  </p>
+<% end %>
+
+<p>
+  <strong>User:</strong>
+  <%= @tree.user %>
+</p>
+
+<%= link_to 'Edit', edit_tree_path(@tree) %> |
+<%= link_to 'Back', trees_path %>
+<p>
+  <%= link_to 'Create New Node', controller: 'nodes', action: 'new', :tree_id => @tree %>
+</p>

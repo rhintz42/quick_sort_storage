@@ -1,0 +1,43 @@
+<h1>Listing nodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th>Url</th>
+      <th>Is in storage</th>
+      <th>Is borrowable</th>
+      <th>Is sellable</th>
+      <th>Tree</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nodes.each do |node| %>
+      <tr>
+        <td><%= node.title %></td>
+        <td><%= node.description %></td>
+        <td><%= node.picture %></td>
+        <td><%= node.url %></td>
+        <td><%= node.is_in_storage %></td>
+        <td><%= node.is_borrowable %></td>
+        <td><%= node.is_sellable %></td>
+        <td><%= node.tree %></td>
+        <td><%= node.user %></td>
+        <td><%= link_to 'Show', node %></td>
+        <td><%= link_to 'Edit', edit_node_path(node) %></td>
+        <td><%= link_to 'Destroy', node, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Node', new_node_path %>

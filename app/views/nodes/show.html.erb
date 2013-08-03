@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @node.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @node.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @node.picture %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @node.url %>
+</p>
+
+<p>
+  <strong>Is in storage:</strong>
+  <%= @node.is_in_storage %>
+</p>
+
+<p>
+  <strong>Is borrowable:</strong>
+  <%= @node.is_borrowable %>
+</p>
+
+<p>
+  <strong>Is sellable:</strong>
+  <%= @node.is_sellable %>
+</p>
+<p>
+  <strong>Tree:</strong>
+  <%= @node.tree %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @node.user %>
+</p>
+
+<%= link_to 'Edit', edit_node_path(@node) %> |
+<%= link_to 'Back', nodes_path %>
