@@ -10,6 +10,7 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
+/db/schema.rb
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
@@ -20,3 +21,5 @@
 
 # Ignore the database.yml file because it has sensitive info
 config/database.yml
+
+Gemfile.lock
